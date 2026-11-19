@@ -291,7 +291,7 @@ If you use this code or build on the results, please cite the paper:
 ```bibtex
 @inproceedings{adaptive_edge_nas,
   title     = {Hardware-Aware One-Shot {NAS} for Lightweight {CNNs}: A Latency-Constrained Evolutionary Search on {Tiny-ImageNet}},
-  author    = {<authors>},
+  author    = {Patel, Poojan and Nariya, Krish and Raju, Angajala Gautam and Sharma, Krishna},
   booktitle = {9th IFIP International Internet of Things (IoT) Conference},
   address   = {United Arab Emirates University (UAEU), Al Ain, UAE},
   note      = {2nd position}
