@@ -283,6 +283,8 @@ Model checkpoints (`models/`), the processed manifest (`processed/`) and the dat
 
 **Hardware-Aware One-Shot NAS for Lightweight CNNs: A Latency-Constrained Evolutionary Search on Tiny-ImageNet**
 
+Poojan Patel, Krish Nariya, Angajala Gautam Raju, Krishna Sharma
+
 *9th IFIP International Internet of Things (IoT) Conference*, held at the United Arab Emirates University (UAEU), Al Ain, UAE.
 🏆 The paper **secured 2nd position** at the conference.
 
