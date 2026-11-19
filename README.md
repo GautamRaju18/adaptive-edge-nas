@@ -1,6 +1,7 @@
 # Adaptive Edge NAS: Hardware-Aware Neural Architecture Search for Edge Devices
 
-> 🏆 **2nd Position at the IFIP Conference, Abu Dhabi, UAE.** The research paper built on this repository placed second at the conference. See [Publication](#publication).
+> 🏆 **2nd Position at the 9th IFIP International Internet of Things (IoT) Conference**, United Arab Emirates University (UAEU), Al Ain, UAE.
+> Paper: *"Hardware-Aware One-Shot NAS for Lightweight CNNs: A Latency-Constrained Evolutionary Search on Tiny-ImageNet"*. See [Publication](#publication).
 
 This repository holds the full pipeline for a **latency-constrained, hardware-aware Neural Architecture Search (NAS)** on **Tiny-ImageNet-200**. A one-shot weight-sharing SuperNet is trained once. An evolutionary search guided by a **measured per-operation latency lookup table (LUT)** then picks an architecture under a 10 ms budget. That architecture is retrained from scratch, compared with hand-designed mobile CNNs, and compressed for deployment (INT8 quantization, pruning, ONNX).
 
@@ -280,16 +281,19 @@ Model checkpoints (`models/`), the processed manifest (`processed/`) and the dat
 
 ## Publication
 
-The research paper written on this work **secured 2nd position at the IFIP conference held in Abu Dhabi, UAE.**
+**Hardware-Aware One-Shot NAS for Lightweight CNNs: A Latency-Constrained Evolutionary Search on Tiny-ImageNet**
+
+*9th IFIP International Internet of Things (IoT) Conference*, held at the United Arab Emirates University (UAEU), Al Ain, UAE.
+🏆 The paper **secured 2nd position** at the conference.
 
 If you use this code or build on the results, please cite the paper:
 
 ```bibtex
 @inproceedings{adaptive_edge_nas,
-  title     = {<paper title>},
+  title     = {Hardware-Aware One-Shot {NAS} for Lightweight {CNNs}: A Latency-Constrained Evolutionary Search on {Tiny-ImageNet}},
   author    = {<authors>},
-  booktitle = {<IFIP conference name and year>},
-  address   = {Abu Dhabi, UAE},
+  booktitle = {9th IFIP International Internet of Things (IoT) Conference},
+  address   = {United Arab Emirates University (UAEU), Al Ain, UAE},
   note      = {2nd position}
 }
 ```
