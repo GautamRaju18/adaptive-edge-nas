@@ -95,7 +95,9 @@ Macro-skeleton for a 64×64 input:
 
 Each `(cell, op)` pair is built standalone, at the exact input channel count and spatial size it sees inside the network. It is timed at batch size 1: 10 warm-up runs, then the median of 50 runs. The predicted latency of an architecture is the sum of its 20 LUT entries:
 
-$$\widehat{\text{LAT}}(a) = \sum_{i=1}^{20} \text{LUT}[i][a_i]$$
+```math
+\widehat{\mathrm{LAT}}(a) = \sum_{i=1}^{20} \mathrm{LUT}\left[i,\; a_i\right]
+```
 
 This makes latency prediction for a candidate O(1) with no hardware in the loop. The table is saved as [`results/latency_lut.json`](experiments/tiny-imagenet/results/latency_lut.json). Predicted latencies in the space range from 0.83 ms to 10.99 ms.
 
@@ -109,13 +111,13 @@ All 7 operations of every cell live side by side in a single SuperNet with share
 
 Each candidate is scored with SuperNet weights on the full validation set. Its fitness combines that accuracy with the LUT latency:
 
-$$
+```math
 F(a) = \begin{cases}
-\text{Acc}(a) & \text{if } \widehat{\text{LAT}}(a) \le B \\
-\text{Acc}(a) - 0.5 \cdot \dfrac{\widehat{\text{LAT}}(a) - B}{B} & \text{otherwise}
+\mathrm{Acc}(a) & \text{if } \widehat{\mathrm{LAT}}(a) \le B \\
+\mathrm{Acc}(a) - 0.5 \cdot \dfrac{\widehat{\mathrm{LAT}}(a) - B}{B} & \text{otherwise}
 \end{cases}
-\qquad B = 10\text{ ms}
-$$
+\qquad B = 10\ \mathrm{ms}
+```
 
 | Setting | Value |
 |---|---|
